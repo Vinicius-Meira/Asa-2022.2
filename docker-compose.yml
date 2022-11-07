@@ -1,7 +1,10 @@
 version: '3'
 services:
   web01:
-    image: nginx
+    build:
+      context: ./web01
+      dockerfile: Dockerfile.dockerfile
+    image: web01
     container_name: web01
     restart: always
     tty: true
@@ -11,7 +14,10 @@ services:
       - asa-network
 
   web02:
-    image: nginx
+    build:
+      context: ./web02
+      dockerfile: Dockerfile.dockerfile
+    image: web02
     container_name: web02
     restart: always
     tty: true
@@ -19,6 +25,10 @@ services:
       - "8081:80"
     networks:
       - asa-network
+
+#proxy:
+  #build:
+    #context: .
 
 #Docker Networks
 networks:
