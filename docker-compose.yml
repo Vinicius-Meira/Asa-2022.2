@@ -8,10 +8,7 @@ services:
     container_name: web01
     restart: always
     tty: true
-    ports:
-      - "8080:80"
-    networks:
-      - asa-network
+
 
   web02:
     build:
@@ -21,10 +18,24 @@ services:
     container_name: web02
     restart: always
     tty: true
-    ports:
-      - "8081:80"
-    networks:
-      - asa-network
+
+  web03:
+    build:
+      context: ./web03
+      dockerfile: Dockerfile.dockerfile
+    image: web02
+    container_name: web03
+    restart: always
+    tty: true
+
+  proxy:
+    build:
+      context: ./proxy
+      dockerfile: Dockerfile.dockerfile
+    image: proxy
+    container_name: proxy
+    restart: always
+    tty: true
 
 #proxy:
   #build:
