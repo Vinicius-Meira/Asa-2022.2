@@ -47,5 +47,7 @@ services:
     container_name: proxy
     restart: always
     tty: true
+    ports:
+      - "8080:80"
     networks:
       - asa
