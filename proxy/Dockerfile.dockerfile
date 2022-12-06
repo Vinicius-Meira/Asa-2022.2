@@ -1,4 +1,3 @@
-FROM nginx:latest 
-RUN mkdir /usr/share/nginx/asa
-COPY nginx.conf /etc/nginx/nginx.conf
-COPY default.conf /etc/nginx/conf.d/default.conf
+FROM nginx:latest
+COPY index1.html /usr/share/nginx/html/index.html
+COPY nginx-proxy.conf /etc/nginx/conf.d/default.conf
