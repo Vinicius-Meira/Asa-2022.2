@@ -1,11 +1,11 @@
 # Hostname and domain name
-myhostname=mymachine.example.com
-mydomain=example.com
+myhostname=mail.asa.br
+mydomain=mail.asa.br
 myorigin=$mydomain
 
 # SSL/TLS certificates
-smtpd_tls_cert_file = /etc/letsencrypt/live/mail.mydomain.com/fullchain.pem
-smtpd_tls_key_file = /etc/letsencrypt/live/mail.mydomain.com/privkey.pem
+smtpd_tls_cert_file = /etc/letsencrypt/live/mail.asa.br/fullchain.pem
+smtpd_tls_key_file = /etc/letsencrypt/live/mail.asa.br/privkey.pem
 smtpd_use_tls=yes
 smtpd_tls_auth_only=yes
 
