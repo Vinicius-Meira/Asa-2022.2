@@ -25,3 +25,4 @@ COPY ./conf/10-ssl.conf /etc/dovecot/conf.d/
 COPY ./conf/10-master.conf /var/spool/postfix
 #Conteudo extra
 #RUN ufw allow Postfix
+CMD ["sh", "-c", "/sbin/postfix start", "tail -f /var/log/maillog"]
