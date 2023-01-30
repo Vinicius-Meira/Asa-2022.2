@@ -15,8 +15,8 @@ $TTL	604800
 @	IN	A	127.0.0.1
 @	IN	AAAA	::1
 
-ns1			A	10.25.3.121
-mail		A 	10.25.3.121
+ns1			A	10.25.1.133
+mail		A 	10.25.1.133
 www			CNAME	ns1
 ;
 ;Delegação de zona
