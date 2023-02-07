@@ -19,7 +19,7 @@ RUN useradd -c 'User vinicius' -m -s /bin/false vinicius
 
 RUN useradd -c 'User juan' -m -s /bin/false juan
 
-# Set user passord
+# Set user password
 RUN echo "vinicius:top"|chpasswd
 
 RUN echo "juan:galado"|chpasswd
