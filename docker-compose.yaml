@@ -76,9 +76,17 @@ services:
       dockerfile: Dockerfile
     image: email
     container_name: email
+    hostname: mail.asa.br
     restart: always
     tty: true
+    volumes:
+      - ./conf-email/rainloop:/var/www/html/rainloop
     ports:
       - "2525:25/tcp"
+      - "100:100/tcp"
+      - "143:143/tcp"
+      - "587:587/tcp"
+      - "993:993/tcp"
+      - "995:995/tcp"
     networks:
       - asa

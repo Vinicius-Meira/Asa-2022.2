@@ -15,8 +15,8 @@ $TTL	604800
 @	IN	A	127.0.0.1
 @	IN	AAAA	::1
 
-ns1			A	10.25.1.133
-mail		A 	10.25.1.133
+ns1			A	192.168.1.72  ;alterar para ip da máquina local
+mail		A 	192.168.1.72  ;alterar para ip da máquina local
 www			CNAME	ns1
 ;
 ;Delegação de zona
